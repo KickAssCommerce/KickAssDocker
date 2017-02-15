@@ -1,0 +1,10 @@
+sudo: required
+services:
+  - docker
+
+env:
+  DOCKER_COMPOSE_VERSION: 1.7.1
+
+script:
+  - docker-compose --file docker-compose-build.yml build
+  - docker-compose --file docker-compose-build.yml run web nginx -t
