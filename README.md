@@ -17,3 +17,7 @@
 # Credits
 
 Thanks to [Meanbee](https://github.com/meanbee) for their work on [docker-magento2](https://github.com/meanbee/docker-magento2) which has been used as the basis for this implementation.
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
