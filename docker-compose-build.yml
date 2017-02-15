@@ -8,6 +8,15 @@ services:
     volumes_from:
       - appdata
 
+  fpm:
+    hostname: fpm.kickasscommerce.docker
+    build:
+      context: 7.1-fpm/
+    ports:
+      - 9000
+    volumes_from:
+      - appdata
+
   appdata:
     image: tianon/true
     volumes:
