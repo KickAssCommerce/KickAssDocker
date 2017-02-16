@@ -17,6 +17,17 @@ services:
     volumes_from:
       - appdata
 
+  cli:
+    hostname: cli.kickasscommerce.docker
+    build:
+      context: 7.1-cli/
+    volumes:
+      - ~/.composer/cache:/root/.composer/cache
+    volumes_from:
+      - appdata
+    environment:
+      - KICKASS_VERSION=dev-develop
+
   appdata:
     image: tianon/true
     volumes:

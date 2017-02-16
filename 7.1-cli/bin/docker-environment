@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Ensure our Kickass directory exists
+mkdir -p $APP_ROOT
+chown www-data:www-data $APP_ROOT
+
+# Configure PHP
+[ ! -z "${PHP_MEMORY_LIMIT}" ] && sed -i "s/!PHP_MEMORY_LIMIT!/${PHP_MEMORY_LIMIT}/" /usr/local/etc/php/conf.d/zz-kickass.ini
+
+[ "$PHP_ENABLE_XDEBUG" = "true" ] && \
+    docker-php-ext-enable xdebug && \
+    echo "Xdebug is enabled"
+
+exec "$@"
