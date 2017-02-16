@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ ! -f "$APP_ROOT/composer.json" ]; then
+    echo "Creating KickAssCommerce project"
+
+    composer create-project \
+        kickasscommerce/kickasscommerce=dev-develop \
+        --no-interaction \
+        $APP_ROOT
+else
+    echo "KickAssCommerce installation found in $APP_ROOT, installing composer dependencies"
+    composer --working-dir=$APP_ROOT install
+fi
+
+echo "Installation complete"
