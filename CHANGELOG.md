@@ -4,10 +4,10 @@ All Notable changes to `KickAssDocker` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
-## NEXT - 2017-02-15
+## 0.1.0 - 2017-02-16
 
 ### Added
-- Initial commit
+- Initial release
 
 ### Deprecated
 - Nothing
