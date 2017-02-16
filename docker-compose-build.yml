@@ -25,6 +25,8 @@ services:
       - ~/.composer/cache:/root/.composer/cache
     volumes_from:
       - appdata
+    environment:
+      - KICKASS_VERSION=dev-develop
 
   appdata:
     image: tianon/true

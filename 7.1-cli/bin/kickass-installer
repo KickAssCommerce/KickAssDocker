@@ -1,10 +1,10 @@
 #!/bin/bash
 
 if [ ! -f "$APP_ROOT/composer.json" ]; then
-    echo "Creating KickAssCommerce project"
+    echo "Creating KickAssCommerce ($KICKASS_VERSION) project"
 
     composer create-project \
-        kickasscommerce/kickasscommerce=dev-develop \
+        kickasscommerce/kickasscommerce=$KICKASS_VERSION \
         --no-interaction \
         $APP_ROOT
 else
