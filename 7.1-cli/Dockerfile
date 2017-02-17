@@ -23,7 +23,7 @@ RUN docker-php-ext-install \
   soap
 
 # Install PHP7 compatible version of xdebug
-RUN pecl install -o -f xdebug-2.4.0
+RUN pecl install -o -f xdebug-2.5.0
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
