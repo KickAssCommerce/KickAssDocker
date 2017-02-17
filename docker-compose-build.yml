@@ -3,8 +3,14 @@ services:
   web:
     build:
       context: nginx/
+    environment:
+      - VIRTUAL_HOST=dev.kickasscommerce.com
+      - VIRTUAL_PORT=80
+      - HTTPS_METHOD=noredirect
     ports:
       - 80
+    links:
+      - fpm
     volumes_from:
       - appdata
 
