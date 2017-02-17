@@ -1,13 +1,16 @@
 version: "2"
 services:
   web:
-    image: kickasscommerce/kickass-nginx:latest
+    image: kickasscommerce/kickass-nginx:1.9
+    hostname: dev.kickasscommerce.com
     environment:
-      - VIRTUAL_HOST=kickasscommerce.docker
+      - VIRTUAL_HOST=dev.kickasscommerce.com
       - VIRTUAL_PORT=80
       - HTTPS_METHOD=noredirect
+      - CERT_NAME=default
     ports:
       - 80
+      - 443
     links:
       - fpm
     volumes_from:
